@@ -8,7 +8,7 @@ class HandeyeCalibration(object):
     """
     Stores parameters and transformation of a hand-eye calibration for publishing.
     """
-    DIRECTORY = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', '..', '..','..', 'dummy', 'config'))
+    DIRECTORY = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', '..', '..','..', '..','dummy', 'config'))
     """Default directory for calibration yaml files."""
 
     # TODO: use the HandeyeCalibration message instead, this should be HandeyeCalibrationConversions
@@ -208,4 +208,3 @@ class HandeyeCalibration(object):
 
         for tp in transf_params:
             rospy.set_param('transformation/'+tp, calib_dict['transformation'][tp])
-
